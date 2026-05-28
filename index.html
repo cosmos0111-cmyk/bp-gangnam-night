@@ -1,214 +1,460 @@
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인프라 테크 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    
+    <!-- SEO Meta Tags -->
+    <title>강서 유흥 추천 | 서구의 품격과 백년의 역사</title>
+    <meta name="description" content="강서구 마곡과 김포공항 일대의 고급스럽고 프라이빗한 유흥 문화를 탐구합니다. 프리미엄 서비스와 안락한 분위기의 강서 유흥 추천 리스트를 확인하세요.">
+    <meta name="keywords" content="강서 유흥, 강서 유흥 추천, 마곡 유흥, 김포공항 유흥, 강서구 룸싸롱, 고급 유흥, 프라이빗 라운지">
+    <meta name="author" content="gangnam-night">
+    <link rel="canonical" href="https://gangnam-night.pages.dev/">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="강서 유흥 추천 | 서구의 품격과 백년의 역사">
+    <meta property="og:description" content="강서구 마곡과 김포공항 일대의 고급스럽고 프라이빗한 유흥 문화를 소개합니다.">
+    <meta property="og:url" content="https://gangnam-night.pages.dev/">
+    <meta property="og:site_name" content="Gangnam Night">
+    <meta property="og:image" content="https://gangnam-night.pages.dev/assets/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강서 유흥 추천 | 서구의 품격">
+    <meta name="twitter:description" content="프라이빗하고 고급스러운 강서구 유흥 문화의 정점.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "강서 유흥 추천 - 노르아 골드",
+      "image": "https://gangnam-night.pages.dev/assets/logo.png",
+      "@id": "https://gangnam-night.pages.dev",
+      "url": "https://gangnam-night.pages.dev",
+      "telephone": "+82-10-6279-0862",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "강서구 내 발길 닿는 곳",
+        "addressLocality": "서울",
+        "addressRegion": "강서구",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.5542",
+        "longitude": "126.8376"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "18:00",
+        "closes": "06:00"
+      },
+      "priceRange": "$$$"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* 
+         * DESIGN SYSTEM: Editorial Luxury (Noir & Gold)
+         * Concept: Typography-driven, High Contrast, Minimalist
+         */
+
+        :root {
+            /* Color Palette: Noir-Gold */
+            --color-primary: #1a1a1a;
+            --color-secondary: #fafaf5;
+            --color-accent: #c5a880;
+            --color-accent-dim: #8a7454;
+            --color-text-muted: #6e6e6e;
+            --color-border: #e0e0e0;
+
+            /* Spacing: Airy */
+            --space-unit: 8px;
+            --gap-sm: 24px;
+            --gap-md: 48px;
+            --gap-lg: 72px;
+            --gap-xl: 120px;
+            
+            /* Typography */
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: "Helvetica Neue", "Arial", sans-serif;
+            
+            --fs-h1: clamp(2.5rem, 5vw, 4rem);
+            --fs-h2: clamp(2rem, 4vw, 3rem);
+            --fs-body: 1.125rem;
+            --lh-heading: 1.1;
+            --lh-body: 1.7;
+
+            /* Layout */
+            --max-width: 720px;
+        }
+
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            font-family: var(--font-serif);
+            font-size: var(--fs-body);
+            line-height: var(--lh-body);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-accent);
+        }
+
+        ul { list-style: none; }
+
+        /* Layout Containers */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-left: var(--gap-md);
+            padding-right: var(--gap-md);
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            line-height: var(--lh-heading);
+            letter-spacing: -0.02em;
+            margin-bottom: var(--gap-sm);
+        }
+
+        h1 { font-size: var(--fs-h1); }
+        h2 { font-size: var(--fs-h2); margin-top: var(--gap-lg); }
+        h3 { font-size: 1.5rem; margin-top: var(--gap-md); }
+
+        p {
+            margin-bottom: var(--gap-sm);
+            color: #333;
+            text-align: justify;
+        }
+
+        .text-accent { color: var(--color-accent); }
+        .drop-cap {
+            float: left;
+            font-size: 3.5rem;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 4px;
+            font-family: var(--font-serif);
+            color: var(--color-accent);
+        }
+
+        /* Header & Nav */
+        header {
+            padding: var(--gap-md) 0;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            background-color: var(--color-secondary);
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 2px solid var(--color-primary);
+            padding: 4px 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--gap-sm);
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-family: var(--font-sans);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            width: 32px;
+            height: 24px;
+            position: relative;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+            margin-bottom: 6px;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--gap-xl) 0;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(250,250,245,0) 0%, rgba(250,250,245,1) 100%);
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-accent);
+            margin-bottom: var(--gap-sm);
+            display: block;
+        }
+
+        /* Content Sections */
+        .section-intro {
+            padding-top: var(--gap-md);
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-accent);
+            margin: var(--gap-lg) auto;
+        }
+
+        /* Review Cards */
+        .review-section {
+            background-color: #f4f4f0;
+            padding: var(--gap-xl) 0;
+        }
+
+        .review-card {
+            border-top: 1px solid var(--color-border);
+            padding: var(--gap-md) 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-sm);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .stars {
+            color: var(--color-accent);
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--color-primary);
+        }
+
+        /* CTA / Contact */
+        .contact-section {
+            text-align: center;
+            padding: var(--gap-xl) 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 16px 32px;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.9rem;
+            border: 1px solid var(--color-primary);
+            transition: all 0.3s ease;
+            margin-top: var(--gap-sm);
+            border-radius: 0; /* No rounded buttons */
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: var(--gap-lg) 0;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-secondary);
+                border-bottom: 1px solid var(--color-border);
+                flex-direction: column;
+                padding: var(--gap-md);
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인프라 테크 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인프라 테크</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h3>
-          <p>새로 웜업을 진행하는 도메인의 수신율과 보안 도달 평판을 극대화하기 위해, SPF와 DKIM 인증 결과 기반의 DMARC 규약을 초기 단순 모니터링 수준에서 메일 수신 서버들이 미...</p>
-        </a>
-      
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">GANGNAM NIGHT</a>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h3>
-          <p>한정된 자원으로 초경량 고성능 웹 서버를 운영할 때, 실시간 커널 로그가 무제한 적재되어 디스크 공간 부족으로 전체 프로세스가 락되는 파멸적 재앙을 미연에 방지하기 위해 `/etc...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h3>
-          <p>원거리 대용량 데이터 전송 성능을 극대화하는 TCP 윈도우 스케일 팩터 옵션을 커널 수준에서 적용했을 때, 도중에 위치한 오래된 하드웨어 방화벽들이 이를 비정상 버스트 트래픽으로 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 마포 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 마포 셔츠룸 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+            <nav class="nav-links" id="navLinks">
+                <a href="#intro">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-subtitle">Seoul Gangseo District</span>
+                <h1>서구의 품격과<br>백년의 역사</h1>
+                <div class="divider"></div>
+                <p>강서구 일대에 숨겨진 가장 우아한 밤의 안식처를 소개합니다.</p>
+            </div>
+        </section>
+
+        <!-- Editorial Content -->
+        <section id="intro" class="container section-intro">
+            <h2>강서 유흥 추천: 새로운 미지의 영역</h2>
+            <article>
+                <span class="drop-cap">S</span>
+                <p>eoul 의 서쪽 관문, 강서구는 단순한 교통의 요충지를 넘어 이제는 고급 유흥 문화의 새로운 중심지로 부상하고 있습니다. 특히 마곡지구와 김포공항 인근은 치밀한 도시 계획과 함께 프라이버시를 중시하는 최상위 계층을 위한 공간들이 속속 들어서고 있습니다. 본 사이트는 이러한 트렌드를 선도하는 <strong>강서 유흥 추천</strong> 리스트를 엄선하여 제공합니다.</p>
+                
+                <p>우리는 화려함만을 추구하지 않습니다. 진정성 있는 호스피탈리티와 세심한 관리가 이루어지는 공간, 즉 'Editorial Luxury'를 지향합니다. 소란스러운 네온사인과 댄스 플로어 대신, 잔잔한 재즈 선율과 고급스러운 인테리어가 돋보이는 라운지형 공간들이 강서구의 밤을 더욱 품격 있게 수놓습니다.</p>
+
+                <h3>마곡과 김포공항의 프리미엄 경험</h3>
+                <p>강서구는 접근성과 배후 단지의 특성을 동시에 충족하는 유일한 지역입니다. 비즈니스 미팅 후의 격식 있는 술자리부터, 오랜만의 재회로 인한 감성적인 저녁 식사까지. 이곳의 유흥업소들은 고객의 눈높이에 맞춘 맞춤형 서비스를 지향합니다. 데이터에 기반한 분석 결과, 강서구의 고객 만족도는 서비스 디테일과 공간의 쾌적함에 기인하고 있습니다.</p>
+
+                <p>이제 더 이상 강남만이 정답은 아닙니다. 서구의 여유로움과 독창적인 분위기를 경험하고 싶다면, 강서구의 밤을 주목하십시오.</p>
+            </article>
+        </section>
+
+        <!-- UGC Reviews -->
+        <section id="reviews" class="review-section">
+            <div class="container">
+                <h2 style="text-align: center;">검증된 경험 (Reviews)</h2>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span>김민준 (32 세)</span>
+                        <span class="stars">★★★★★</span>
+                        <span>2023. 10. 15</span>
+                    </div>
+                    <p class="review-text">"강서쪽 업소들을 많이 가봤는데, 여기는 확실히 관리가 잘 되어 있습니다. 매니저님의 센스가 뛰어나고, 룸 컨디션이 호텔 스위트룸 수준이었습니다. 조용하게 이야기 나누기에는 최고입니다."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span>박서연 (28 세)</span>
+                        <span class="stars">★★★★★</span>
+                        <span>2023. 11. 02</span>
+                    </div>
+                    <p class="review-text">"친구 생일파티로 방문했습니다. 음식 퀄리티가 놀라웠고, 특히 분위기를 깔아주는 조명과 음악이 인상적이었습니다. 강서 유흥 추천 리스트에서 가장 만족스러웠던 곳입니다."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span>이준호 (45 세)</span>
+                        <span class="stars">★★★★☆</span>
+                        <span>2023. 11. 20</span>
+                    </div>
+                    <p class="review-text">"비즈니스 미팅 후接待로 이용했습니다. 프라이빗함이 보장되어 안심하고 대화할 수 있었습니다. 주차 서비스도 완벽하여 쾌적했습니다."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container contact-section">
+            <h3>Reservations & Inquiry</h3>
+            <p>격식 있는 밤을 위한 예약 문의는 아래로 연락 주시기 바랍니다.<br>24 시간 전문 컨시어지가 대기하고 있습니다.</p>
+            <a href="tel:01062790862" class="btn">010-6279-0862</a>
+        </section>
     </main>
+
     <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="container">
+            <p>&copy; 2024 Gangnam Night. All rights reserved.</p>
+            <p>Seoul, Gangseo-gu, Magok-dong</p>
+        </div>
     </footer>
-  </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
